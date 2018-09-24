@@ -12,12 +12,14 @@ fi
 
 # This command is used a LOT both below and in daily life
 alias k=kubectl
+compdef k=kubectl
 
 # Apply a YML file
 alias kaf='kubectl apply -f'
 
 # Drop into an interactive terminal on a container
 alias keti='kubectl exec -ti'
+compdef keti='kubectl exec -ti'
 
 # Manage configuration quickly to switch contexts between local, dev ad staging.
 alias kcuc='kubectl config use-context'
@@ -27,6 +29,7 @@ alias kccc='kubectl config current-context'
 
 # Pod management.
 alias kgp='kubectl get pods'
+compdef kgp='kubectl get pods'
 alias kep='kubectl edit pods'
 alias kdp='kubectl describe pods'
 alias kdelp='kubectl delete pods'
@@ -61,6 +64,7 @@ alias krsd='kubectl rollout status deployment'
 
 # Rollout management.
 alias kgrs='kubectl get rs'
+compdef kgrs='kubectl get rs'
 alias krh='kubectl rollout history'
 alias kru='kubectl rollout undo'
 
@@ -69,7 +73,9 @@ alias kpf="k port-forward"
 
 # Logs
 alias kl='kubectl logs'
+compdef kl='kubectl logs'
 alias klf='kubectl logs -f'
+compdef klf='kubectl logs -f'
 
 # File copy
 alias kcp='kubectl cp'
